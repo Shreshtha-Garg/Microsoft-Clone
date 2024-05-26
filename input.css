@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Original box-shadow using rem units */
+/* box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13), 0 .0625rem .125rem 0 rgba(0, 0, 0, .11); */
+.box_shadow {
+    --tw-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+    --tw-shadow-colored: 0 3px 7px 0 var(--tw-shadow-color), 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (max-width: 768px) { /* md breakpoint */
+    .box_shadow {
+        --tw-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
+        --tw-shadow-colored: 0 3px 7px 0 var(--tw-shadow-color), 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
+
+
+
+.carousel {
+    position: relative;
+    margin: 0 auto; 
+}
+
+.slides {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: none; 
+}
+
+.slide.active {
+    display: flex; 
+}
+
+@media (max-width: 1023px) {
+    .slides {
+        display: block;
+    }
+
+    .slide {
+        display: block; 
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.prev,
+.next {
+    color: #2f2f2f;
+    border: none;
+    cursor: pointer;
+    padding: 7px 1px;
+    font-size: 20px;
+    margin: 0 5px;
+    overflow-x: hidden;
+}
+
+.prev svg path,
+.next svg path {
+    transition: transform 0.2s ease-in;
+}
+
+.prev:hover svg path {
+    transform: translateX(-46px);
+}
+
+.next:hover svg path {
+    transform: translateX(36px);
+}
+
+
+.indicator {
+    display: flex;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+    border: 2px solid black;
+}
+.carousel-control-autoplay:hover svg circle {
+fill: black;
+}
+.carousel-control-autoplay:hover svg rect,.carousel-control-autoplay:hover svg polygon {
+fill: white;
+}
+
+

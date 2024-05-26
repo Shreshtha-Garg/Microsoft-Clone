@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.microsoft.com/favicon.ico?v2" type="image/x-icon">
+    <link rel="stylesheet" href="input.css">
+    <link href="https://db.onlinewebfonts.com/c/ba047a29b78bffd9a985b2e86b289fe8?family=MWF+MDL2+Assets"
+        rel="stylesheet">
+    <title>Microsoft – Cloud, Computers, Apps & Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="cursor-pointer navbar flex justify-between items-center ">
+        <div class="flex justify-center items-center md:order-2">
+            <div class="hamburger-container inline-block cursor-pointer md:hidden">
+                <div class="hamburger p-3">
+                    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="9" width="20" height="1.5" fill="black" />
+                        <rect x="5" y="14" width="20" height="1.5" fill="black" />
+                        <rect x="5" y="19" width="20" height="1.5" fill="black" />
+                    </svg>
+                </div>
+                <div class="close hidden p-3">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6L18 18" stroke="black" stroke-width="1"/>
+                        <path d="M6 18L18 6" stroke="black" stroke-width="1"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="search md:hidden pl-1" style="font-family: 'MWF MDL2 Assets' "></div>
+        </div>
+        <div class="logo text-center flex md:order-1 md:px-5 lg:pl-12 items-center">
+            <div class="py-3 px-1 w-[116px] h-11">
+                <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                    width="100%" height="100%">
+            </div>
+            <div
+                class="features absolute md:static md:text-[13px] w-fit md:w-auto bg-gray-200 md:bg-transparent inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0">
+                <div class="fea_items hover:underline px-[5px]">Microsoft 365</div>
+                <div class="fea_items hover:underline px-[5px]">Teams</div>
+                <div class="fea_items hover:underline px-[5px]">Windows</div>
+                <div class="fea_items hover:underline px-[5px]">Surface</div>
+                <div class="fea_items hover:underline px-[5px]">Xbox</div>
+                <div class="fea_items hover:underline px-[5px]">Support</div>
+            </div>
+        </div>
+        <div class="cart text-center md:order-3 flex mx-2 lg:pr-11 justify-center items-center"
+            style="font-family: 'MWF MDL2 Assets' ">
+            <div class="text-[13px] font-sans relative hidden md:flex md:items-baseline">
+                <button class="all-microsoft hover:underline">All Microsoft </button>
+                <span style="font-family: 'MWF MDL2 Assets' "
+                    class="font-semibold my-2 mx-1.5 text-[8px] top-0.5 relative"></span>
+            </div>
+            <div class="search hidden m-2.5 mx-3 md:block"></div>
+            <div class="mx-3 my-2.5"></div>
+            <div class="m-2 ml-4 md:ml-2 w-8 h-8"><img src="add-user.png"></div>
+        </div>
+        <div id="hamburgerDropdown" class="z-50 hidden absolute top-[54px] left-0 w-full bg-[#f2f2f2] border-t border-gray-200 shadow-lg">
+            <div class="flex flex-col border-b-[2px] border-black divide-y divide-gray-200">
+                <a href="https://www.microsoft.com/en-in/microsoft-365" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Microsoft 365</a>
+                <a href="https://www.microsoft.com/en-in/microsoft-teams/group-chat-software" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Teams</a>
+                <a href="https://copilot.microsoft.com/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Copilot</a>
+                <a href="https://www.microsoft.com/en-in/windows/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Windows</a>
+                <a href="https://www.xbox.com/" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Xbox</a>
+                <a href="https://support.microsoft.com/en-in" class="block px-4 py-4 text-gray-800 hover:bg-gray-100">Support</a>
+            </div>
+        </div>
+    </div>
+    <div id="allMicrosoftDropdown"
+        class="hidden absolute bg-[#f2f2f2] border border-gray-200 rounded-lg shadow-lg py-2  right-[10vw] z-40">
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.microsoft.com/&ved=2ahUKEwictrnbyaiGAxWtxDgGHYlRANIQFnoECAcQAQ&usg=AOvVaw27AVWJi80DZUox6KnBoYm3"
+            class="block px-4 py-2 text-gray-800 hover:underline">Microsoft Store</a>
+        <a href="https://learn.microsoft.com/" class="block px-4 py-2 text-gray-800 hover:underline">Microsoft
+            Learn</a>
+        <a href="https://www.microsoft.com/en-in/windows-365"
+            class="block px-4 py-2 text-gray-800 hover:underline">Windows 365</a>
+    </div>
+    <div class="help text-white font-semibold bg-[#0067b8] cursor-pointer items-center flex justify-center py-4 px-6">
+        <div class="help_text text-center mr-1.5">
+            <span class="hover:underline">Require assistance with Microsoft 365? Call 0008004402127 to inquire or make a
+                purchase.</span>
+        </div>
+        <span class="help_icon font-semibold font-[MWF-FLUENT-ICONS]">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z"
+                    fill="#ffffff" />
+            </svg>
+        </span>
+    </div>
+    <!-- Dropdown menu (initially hidden) -->
+    <!-- Dropdown menu (initially hidden) -->
+
+    <!-- <div class="slider flex flex-col cursor-pointer mx-1 lg:flex-row lg:bg-[#f2f2f2]">
+        <div class="left hidden lg:block">
+            <img src="img_1.jpg" alt="img1">
+        </div>
+        <div class="left lg:hidden">
+            <img src="img1.jpg" alt="img1">
+        </div>
+        <div
+            class=" lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 lg:translate-y-0 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12 ">
+            <div class="right_body">
+                <div
+                    class="right_heading 1.5xl:text-[2.3125rem] lg:text-[1.8125rem] text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 1.5xl:mb-5">
+                    <h2>Surface Pro 9</h2>
+                </div>
+                <div class="right_content mb-8">
+                    Tablet versatility and laptop power — all in one ultra-portable device
+                </div>
+                <div class="right_button">
+                    <span
+                        class="font-semibold  p-2.5 bg-[#0067b8] text-white text-base border-[#9fc6e4] rounded-sm hover:bg-[#005da5] hover:shadow-md">Learn
+                        more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider_controls text-center p-4">
+        play pause next pvs
+    </div> -->
+    <!-- <div class="slider relative overflow-hidden w-full h-auto">
+        <div class="slider-track flex transition-transform duration-400">
+            <img src="img1.jpg" alt="Image 1" class="w-full h-auto">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Sapphire-MC001-3000x1682:VP3-1083x600" alt="Image 2" class="w-full h-auto">
+        </div>
+    </div>
+    
+    <div class="slider-controls text-center p-4 flex justify-center gap-2">
+        <button id="prev" class="py-2 px-4 bg-[#0067b8] text-white rounded hover:bg-[#005da5]">Prev</button>
+        <button id="play-pause" class="py-2 px-4 bg-[#0067b8] text-white rounded hover:bg-[#005da5]">Pause</button>
+        <button id="next" class="py-2 px-4 bg-[#0067b8] text-white rounded hover:bg-[#005da5]">Next</button>
+    </div> -->
+    <!-- <div class="carousel">
+        <div class="slides">
+          <div class="slide">
+            <img src="img1.jpg" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="img2.jpg" alt="Image 2">
+          </div>
+        </div>
+        <button class="prev" aria-label="Previous slide">&#10094;</button>
+        <button class="next" aria-label="Next slide">&#10095;</button>
+      </div> -->
+    <div class="outer_slider">
+        <div class="slider carousel flex flex-col cursor-pointer mx-1 lg:flex-row lg:bg-[#f2f2f2]">
+            <div class="slides">
+                <div class="slide">
+                    <div class="left hidden lg:block  h-[31vw] w-auto overflow-hidden">
+                        <img src="img1.jpg" alt="img1">
+                    </div>
+                    <div class="left lg:hidden">
+                        <img src="img1.jpg" alt="img1">
+                    </div>
+                    <div
+                        class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 -translate-y-2 lg:translate-y-0 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12 ">
+                        <div class="right_body">
+                            <div
+                                class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
+                                <h2>Surface Pro 9</h2>
+                            </div>
+                            <div class="right_content mb-8">
+                                Tablet versatility and laptop power — all in one ultra-portable device
+                            </div>
+                            <div class="right_button">
+                                <button
+                                    class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn
+                                    more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="left hidden lg:block h-[31vw] w-auto overflow-hidden">
+                        <img src="img2.jpg" alt="img2">
+                    </div>
+                    <div class="left lg:hidden">
+                        <img src="img2.jpg" alt="img2">
+                    </div>
+                    <div
+                        class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 lg:translate-y-0 -translate-y-2 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12">
+                        <div class="right_body">
+                            <div
+                                class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
+                                <h2>Lightning-fast Surface PCs</h2>
+                            </div>
+                            <div class="right_content mb-8">
+                                <!-- Tablet versatility and laptop power — all in one ultra-portable device -->
+                                Unlock the next-gen AI features with this exceptionally powerful laptop.
+                            </div>
+                            <div class="right_button">
+                                <button
+                                    class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn
+                                    more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btns flex items-center justify-center mt-3">
+            <button type="button"
+                class="carousel-control-autoplay playing border-[3px] border-transparent border-dotted w-11 h-11"
+                id="autoplayButton" aria-pressed="false">
+                <span class="sr-only" id="autoplayButtonLabel">Pause</span>
+                <div class="icon-pause box-border justify-center items-center flex">
+                    <svg viewBox="0 0 100 100" width="24" height="24">
+                        <!-- Circle -->
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="none" />
+                        <!-- Horizontal lines -->
+                        <rect x="32" y="30" width="7" height="40" fill="black" />
+                        <rect x="61" y="30" width="7" height="40" fill="black" />
+                    </svg>
+                </div>
+                <div class="icon-play box-border justify-center items-center" style="display:none;">
+                    <svg viewBox="0 0 100 100" width="24" height="24">
+                        <!-- Circle -->
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="none" />
+                        <!-- Triangle -->
+                        <polygon points="38,28 38,72 72,50" fill="black" />
+                    </svg>
+
+                </div>
+            </button>
+            <button class="prev border-[3px] border-transparent border-dotted" aria-label="Previous slide">
+                <svg viewBox="0 0 100 100" width="30" height="18">
+                    <path d="M70 10 L30 50 L70 90" stroke="black" stroke-width="7" fill="none" />
+                </svg>
+            </button>
+            <div class="indicator">
+                <div class="dot mx-4 bg-black" id="first_dot"></div>
+                <div class="dot mx-4 " id="second_dot"></div>
+            </div>
+            <button class="next border-[3px] border-transparent border-dotted" aria-label="Next slide">
+                <svg viewBox="0 0 100 100" width="30" height="18">
+                    <path d="M30 10 L70 50 L30 90" stroke="black" stroke-width="7" fill="none" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="outer flex justify-center mx-3 mb-4">
+        <div class="inner flex justify-center flex-wrap">
+            <div class="item mx-6 my-4">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"
+                        alt="" width="40px" height="40px">
+                </div>
+                <div class="text text-[#076bb9] font-semibold">
+                    <a class="underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Choose
+                        your Microsoft 365
+                    </a>
+                </div>
+            </div>
+            <div class="item mx-6 my-4">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Xbox-Games-Consoles?wid=40&hei=40"
+                        alt="" width="40px" height="40px">
+                </div>
+                <div class="text text-[#076bb9] font-semibold">
+                    <a class="underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Buy
+                        Xbox games and consoles
+                    </a>
+                </div>
+            </div>
+            <div class="item mx-6 my-4">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"
+                        alt="" width="40px" height="40px">
+                </div>
+                <div class="text text-[#076bb9] font-semibold">
+                    <a class="underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Get
+                        Windows 11
+                    </a>
+                </div>
+            </div>
+            <div class="item mx-6 my-4">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Surface-Devices?wid=40&hei=40"
+                        alt="" width="40px" height="40px">
+                </div>
+                <div class="text text-[#076bb9] font-semibold">
+                    <a class="underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Explore
+                        Surface devices
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer flex justify-center ">
+        <div class="inner flex justify-center flex-wrap lg:px-[5%] md:my-12">
+            <div class="item px-3 lg:pl-0 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-5-M1-Platinum-01-1?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Surface Laptop 5</h2>
+                    <div class="text"> Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with
+                        Windows 11.</div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline "
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Learn
+                        more
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Surface-Laptop-Studio-01-CP?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Surface Laptop Studio</h2>
+                    <div class="text"> Flex your creative muscle on the most powerful Surface Laptop. Now available with
+                        Windows 11.</div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Learn
+                        more
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSX-CP-Xbox-Series-X?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Xbox Series X</h2>
+                    <div class="text">The fastest, most powerful Xbox ever.</div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline "
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Shop
+                        Xbox Series X
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 lg:pr-0 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Xbox Series S</h2>
+                    <div class="text"> Next-gen performance in the smallest Xbox ever. </div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline "
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Shop
+                        Xbox Series S
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bing px-3 lg:px-[5%] mb-12 relative">
+        <div class="img flex justify-center md:hidden">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Bing-AI-Open-Preview:VP2-859x540"
+                alt="bing">
+        </div>
+        <div class="img md:flex lg:hidden justify-center hidden">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Bing-AI-Open-Preview:VP3-1083x600"
+                alt="bing">
+        </div>
+        <div class="img lg:flex xl:hidden justify-center hidden">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Bing-AI-Open-Preview:VP4-1260x600"
+                alt="bing">
+        </div>
+        <div class="img xl:flex justify-center hidden w-full">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Bing-AI-Open-Preview:VP5-1596x600"
+                alt="bing">
+        </div>
+        <div class="content px-3 lg:px-12 lg:absolute lg:top-[7vw] 1.5xl:top-[4vw] 1.5xl:left-[6vw]">
+            <div
+                class=" lg:flex lg:w-[39.17%] lg:items-center right lg:shadow-none box_shadow max-md:shadow-none md:-translate-y-11 lg:translate-y-0 bg-white lg:bg-transparent  py-12 md:px-12">
+                <!-- overwrited md box shadow  -->
+                <div class="right_body ">
+                    <div
+                        class="right_heading 1.5xl:text-[2.3125rem] lg:text-[1.8125rem] text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 1.5xl:mb-5 1.5xl:text-4xl">
+                        <h2>
+                            Announcing the next wave of AI innovation
+                        </h2>
+                    </div>
+                    <div class="right_content mb-8">
+                        The new Microsoft Bing and Edge will soon feature more visual search responses, chat history,
+                        and persistent chat within Edge. We're also adding actions to help people complete tasks.
+                    </div>
+                    <div class="right_button">
+                        <span
+                            class="font-semibold  p-2.5 bg-[#0067b8] text-white text-base border-[#9fc6e4] rounded-sm hover:bg-[#005da5] hover:shadow-md">
+                            Learn more about it </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer lg:py-12">
+        <div
+            class="heading mb-3 lg:mb-4 1.5xl:mb-5 px-3 lg:px-[5%] font-semibold text-[1.5rem] lg:text-[1.8125rem] 1.5xl:text-[2.3125rem] leading-[1.2] ">
+            <h2>For business</h2>
+        </div>
+        <div class="inner flex justify-center flex-wrap lg:px-[5%] ">
+            <div class="item px-3 lg:pl-0 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Surf-CP-SurfaceFamilyForBusiness?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Surface for Business</h2>
+                    <div class="text"> No matter what you do, there’s a Surface to help you do it. </div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline "
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Shop
+                        now
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Get Microsoft Teams for free</h2>
+                    <div class="text"> Online meetings, chat and shared cloud storage – all in one place. </div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Sign
+                        up for free
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Microsoft-365-For-Business-Woman-Teams-Call?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Try Microsoft 365 for free
+                    </h2>
+                    <div class="text"> Get Microsoft Teams, secure cloud storage and premium apps across devices with a
+                        free one-month Microsoft 365 Business Standard trial. </div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline "
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Start
+                        your free trial
+                    </a>
+                </div>
+            </div>
+            <div class="item px-3 lg:pr-0 mb-12 sm:basis-1/2 sm:max-w-[50%] lg:basis-1/4 lg:max-w-[25%]">
+                <div class="logo flex justify-center mb-2">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Azure-AI-Bloom?wid=517&hei=293&fit=crop"
+                        alt="">
+                </div>
+                <div class="content">
+                    <h2
+                        class="font-semibold text-[1.3125rem]  lg:text-[1.5rem] mb-2 lg:mb-3 1.5xl:text-[1.8125rem] leading-[1.2] 1.5xl:mb-4 ">
+                        Join the era of AI</h2>
+                    <div class="text"> Create, communicate, and code with the latest Microsoft AI solutions.</div>
+                </div>
+                <div class="text text-[#076bb9] font-semibold mt-5">
+                    <a class="hover:underline"
+                        href="https://www.microsoft.com/en-in/microsoft-365/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">Explore
+                        AI solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="promo px-3 mb-16">
+        <div class="b1 flex items-center px-3 lg:px-[5%]">
+            <div class="b2 mr-3">
+                Follow Microsoft
+            </div>
+            <div class="icons flex justify-center items-center">
+                <div class="fb mr-3"><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Facebook 2x?scl=1"
+                        data-src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Facebook 2x?scl=1"
+                        alt="Facebook" title="Facebook" width="32" height="32"></div>
+                <div class="X mr-3"><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/icon-MSCOM-X-64x64?scl=1"
+                        data-src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/icon-MSCOM-X-64x64?scl=1"
+                        alt="X" title="X" width="32" height="32"></div>
+                <div class="yt "><img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/YouTube 2x?scl=1"
+                        data-src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/YouTube 2x?scl=1"
+                        alt="YouTube" title="YouTube" width="32" height="32"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="outer bg-[#f2f2f2]">
+            <div class="p-3 lg:px-[5%] overflow-hidden">
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 pr-3">
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5">What's new</div>
+                    <ul class=" cursor-pointer text-[#616161] text-[11px]/4">
+
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Microsoft 365 What's new"
+                                href="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=IN_UHF_Footer_M365">Microsoft
+                                365</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Games What's new"
+                                href="https://www.microsoft.com/en-in/store/b/xbox?icid=IN_UHF_Footer_Games">Games</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Surface Pro 9 What's new"
+                                href="https://www.microsoft.com/en-in/surface/devices/surface-pro-9?icid=IN_UHF_Footer_SurfacePro9">Surface
+                                Pro 9</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Surface Laptop 5 What's new"
+                                href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-5?icid=IN_UHF_Footer_SurfaceLaptop5">Surface
+                                Laptop 5</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Surface Laptop Go 2 What's new"
+                                href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-go-2?icid=IN_UHF_Footer_SurfaceLaptopGo2">Surface
+                                Laptop Go 2</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline" aria-label="Windows 11 apps What's new"
+                                href="https://www.microsoft.com/en-in/windows/windows-11-apps?icid=IN_UHF_Footer_Windows11apps">Windows
+                                11 apps</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 px-3">
+
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5 ">Microsoft Store</div>
+                    <ul class="cursor-pointer text-[#616161] text-[11px]/4">
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Account profile Microsoft Store"
+                                href="https://account.microsoft.com/">Account profile</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Download Center Microsoft Store"
+                                href="https://www.microsoft.com/en-in/download">Download Center</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Store Support Microsoft Store"
+                                href="https://go.microsoft.com/fwlink/?linkid=2139749">Microsoft Store Support</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Returns Microsoft Store"
+                                href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x4009">Returns</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Order tracking Microsoft Store"
+                                href="https://account.microsoft.com/orders">Order tracking</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 px-3">
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5 ">Education</div>
+                    <ul class="cursor-pointer text-[#616161] text-[11px]/4">
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft in education Education"
+                                href="https://www.microsoft.com/en-in/education">Microsoft in education</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Devices for education Education"
+                                href="https://www.microsoft.com/en-in/education/devices/overview">Devices for
+                                education</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Teams for Education Education"
+                                href="https://www.microsoft.com/en-in/education/products/teams">Microsoft Teams for
+                                Education</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft 365 Education Education"
+                                href="https://www.microsoft.com/en-in/education/buy-license/microsoft365">Microsoft 365
+                                Education</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Office Education Education"
+                                href="https://www.microsoft.com/en-in/education/products/office">Office Education</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Educator training and development Education"
+                                href="https://education.microsoft.com/">Educator training and development</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Deals for students and parents Education"
+                                href="https://www.microsoft.com/en-us/store/b/education">Deals for students and
+                                parents</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Azure for students Education"
+                                href="https://azure.microsoft.com/en-in/free/students/">Azure for students</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 px-3">
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5 ">Business</div>
+                    <ul class="cursor-pointer text-[#616161] text-[11px]/4">
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Cloud Business"
+                                href="https://www.microsoft.com/en-in/microsoft-cloud">Microsoft Cloud</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Security Business"
+                                href="https://www.microsoft.com/en-in/security">Microsoft Security</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Azure Business"
+                                href="https://azure.microsoft.com/en-in/">Azure</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Dynamics 365 Business"
+                                href="https://dynamics.microsoft.com/en-in/">Dynamics 365</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft 365 Business"
+                                href="https://www.microsoft.com/en-in/microsoft-365/business/">Microsoft 365</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Advertising Business"
+                                href="https://about.ads.microsoft.com/en-in">Microsoft Advertising</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Industry Business"
+                                href="https://www.microsoft.com/en-in/industry">Microsoft Industry</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Teams Business"
+                                href="https://www.microsoft.com/en-in/microsoft-teams/group-chat-software">Microsoft
+                                Teams</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 px-3">
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5 ">Developer &amp; IT
+                    </div>
+                    <ul class="cursor-pointer text-[#616161] text-[11px]/4">
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Developer Center Developer &amp; IT"
+                                href="https://developer.microsoft.com/en-in/">Developer Center</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Documentation Developer &amp; IT"
+                                href="https://learn.microsoft.com/docs/">Documentation</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Learn Developer &amp; IT"
+                                href="https://learn.microsoft.com/">Microsoft Learn</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Tech Community Developer &amp; IT"
+                                href="https://techcommunity.microsoft.com/">Microsoft Tech Community</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Azure Marketplace Developer &amp; IT"
+                                href="https://azuremarketplace.microsoft.com/en-in/">Azure Marketplace</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="AppSource Developer &amp; IT"
+                                href="https://appsource.microsoft.com/en-in/">AppSource</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Microsoft Power Platform Developer &amp; IT"
+                                href="https://powerplatform.microsoft.com/en-in/">Microsoft Power Platform</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Visual Studio Developer &amp; IT"
+                                href="https://visualstudio.microsoft.com/">Visual Studio</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="inner w-full float-left sm:w-1/3 lg:w-1/6 pt-9 px-3">
+                    <div class="heading text-[#646464] font-semibold pb-1 text-[15px] leading-5 ">Company</div>
+                    <ul class="cursor-pointer text-[#616161] text-[11px]/4">
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Careers Company"
+                                href="https://careers.microsoft.com/">Careers</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="About Microsoft Company"
+                                href="https://www.microsoft.com/en-in/about">About Microsoft</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Company news Company"
+                                href="https://news.microsoft.com/en-in">Company news</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Privacy at Microsoft Company"
+                                href="https://privacy.microsoft.com/en-in">Privacy at Microsoft</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Investors Company"
+                                href="https://www.microsoft.com/investor/default.aspx">Investors</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Security Company"
+                                href="https://www.microsoft.com/en-in/security/default.aspx">Security</a>
+                        </li>
+                        <li class="py-2">
+                            <a class="hover:underline " aria-label="Sustainability Company"
+                                href="https://www.microsoft.com/en-in/sustainability/">Sustainability</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="footer_btm px-6 lg:px-[5%] pb-4 pt-[30px] text-[#616161] text-[11px]/4">
+                <div class="inner lg:flex items-center justify-between ">
+                    <div class="lg:flex items-center ">
+                        <div class="flex items-center mb-3 lg:mb-0 lg:mr-6">
+                            <div class="earth text-xl mr-3" style="font-family: 'MWF MDL2 Assets' "> </div>
+                            <a href="https://www.microsoft.com/en-in/locale" class="hover:underline"> English(India)</a>
+                        </div>
+                        <div class="privacy flex">
+                            <div class="privacy_icon relative right-1"><svg role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve"
+                                    height="16" width="43">
+                                    <title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+                                    <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+                                        style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff;"></path>
+                                    <path
+                                        d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+                                        style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+                                    <path
+                                        d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+                                        style="fill:#fff"></path>
+                                    <path
+                                        d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+                                        style="fill:#06f"></path>
+                                </svg></div>
+                            <a class="hover:underline text-black"
+                                href="https://aka.ms/yourcaliforniaprivacychoices">Your
+                                Privacy Choices</a>
+                        </div>
+                    </div>
+                    <div class="contact ">
+                        <ul class="">
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">
+                                <a class="" href="https://support.microsoft.com/contactus">Contact Microsoft</a>
+                            </li>
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">
+                                <a class="" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy</a>
+                            </li>
+                            <!-- <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5" >
+                                <a class="" href="#">Manage cookies</a>
+                            </li> -->
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">
+                                <a class="" href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a>
+                            </li>
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">
+                                <a class="" href="https://go.microsoft.com/fwlink/?linkid=2196228">Trademarks</a>
+                            </li>
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">
+                                <a class="" href="https://choice.microsoft.com/">About our ads</a>
+                            </li>
+                            <li class="inline-flex md:pr-6 pt-2 lg:pt-0 px-1.5">© Microsoft 2023</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
