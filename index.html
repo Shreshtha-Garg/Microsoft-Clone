@@ -152,58 +152,47 @@
         <button class="prev" aria-label="Previous slide">&#10094;</button>
         <button class="next" aria-label="Next slide">&#10095;</button>
       </div> -->
-    <div class="outer_slider">
+      <div class="outer_slider">
         <div class="slider carousel flex flex-col cursor-pointer mx-1 lg:flex-row lg:bg-[#f2f2f2]">
-            <div class="slides">
-                <div class="slide">
-                    <div class="left hidden lg:block  h-[31vw] w-auto overflow-hidden">
+            <div class="slides relative h-[31vw]">
+                <div class="slide active" id="slide1">
+                    <div class="left hidden lg:block h-[31vw] w-auto overflow-hidden">
                         <img src="img1.jpg" alt="img1">
                     </div>
                     <div class="left lg:hidden">
                         <img src="img1.jpg" alt="img1">
                     </div>
-                    <div
-                        class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 -translate-y-2 lg:translate-y-0 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12 ">
+                    <div class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 -translate-y-2 lg:translate-y-0 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12">
                         <div class="right_body">
-                            <div
-                                class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
+                            <div class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
                                 <h2>Surface Pro 9</h2>
                             </div>
                             <div class="right_content mb-8">
                                 Tablet versatility and laptop power — all in one ultra-portable device
                             </div>
                             <div class="right_button">
-                                <a
-                                    href="https://www.microsoft.com/en-in/surface/devices/surface-pro-11th-edition?icid=mscom_marcom_H1a_SurfacePro11Edition_FY24SpringSurface"><button
-                                        class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn
-                                        more</button></a>
+                                <button class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn more</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide">
+                <div class="slide" id="slide2">
                     <div class="left hidden lg:block h-[31vw] w-auto overflow-hidden">
                         <img src="img2.jpg" alt="img2">
                     </div>
                     <div class="left lg:hidden">
                         <img src="img2.jpg" alt="img2">
                     </div>
-                    <div
-                        class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 lg:translate-y-0 -translate-y-2 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12">
+                    <div class="lg:flex lg:items-center right box_shadow lg:shadow-none md:-translate-y-11 lg:translate-y-0 -translate-y-2 bg-white lg:bg-inherit md:mx-3 p-6 pb-12 md:p-12">
                         <div class="right_body">
-                            <div
-                                class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
+                            <div class="right_heading text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 lg:text-xl 1.5xl:text-2xl 1.5xl:mb-5">
                                 <h2>Lightning-fast Surface PCs</h2>
                             </div>
                             <div class="right_content mb-8">
-                                <!-- Tablet versatility and laptop power — all in one ultra-portable device -->
                                 Unlock the next-gen AI features with this exceptionally powerful laptop.
                             </div>
                             <div class="right_button">
-                                <a
-                                    href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-7th-edition?icid=mscom_marcom_H2a_SurfaceLaptop7Edition_FY24SpringSurface"><button
-                                        class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn
-                                        more</button></a>
+                                <button class="font-semibold px-4 py-2 bg-blue-600 text-white text-base rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Learn more</button>
                             </div>
                         </div>
                     </div>
@@ -211,27 +200,20 @@
             </div>
         </div>
         <div class="btns flex items-center justify-center mt-3">
-            <button type="button"
-                class="carousel-control-autoplay playing border-[3px] border-transparent border-dotted w-11 h-11"
-                id="autoplayButton" aria-pressed="false">
+            <button type="button" class="carousel-control-autoplay playing border-[3px] border-transparent border-dotted w-11 h-11" id="autoplayButton" aria-pressed="false">
                 <span class="sr-only" id="autoplayButtonLabel">Pause</span>
                 <div class="icon-pause box-border justify-center items-center flex">
                     <svg viewBox="0 0 100 100" width="24" height="24">
-                        <!-- Circle -->
                         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="none" />
-                        <!-- Horizontal lines -->
                         <rect x="32" y="30" width="7" height="40" fill="black" />
                         <rect x="61" y="30" width="7" height="40" fill="black" />
                     </svg>
                 </div>
                 <div class="icon-play box-border justify-center items-center" style="display:none;">
                     <svg viewBox="0 0 100 100" width="24" height="24">
-                        <!-- Circle -->
                         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="none" />
-                        <!-- Triangle -->
                         <polygon points="38,28 38,72 72,50" fill="black" />
                     </svg>
-
                 </div>
             </button>
             <button class="prev border-[3px] border-transparent border-dotted" aria-label="Previous slide">
@@ -241,7 +223,7 @@
             </button>
             <div class="indicator">
                 <div class="dot mx-4 bg-black" id="first_dot"></div>
-                <div class="dot mx-4 " id="second_dot"></div>
+                <div class="dot mx-4" id="second_dot"></div>
             </div>
             <button class="next border-[3px] border-transparent border-dotted" aria-label="Next slide">
                 <svg viewBox="0 0 100 100" width="30" height="18">
@@ -250,8 +232,8 @@
             </button>
         </div>
     </div>
-
-
+    
+    
 
 
 
