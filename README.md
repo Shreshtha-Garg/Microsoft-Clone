@@ -10,6 +10,7 @@ This project is a clone of the Microsoft website, designed to replicate the look
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
 - [License](#license)
 
 ## Demo
@@ -92,6 +93,9 @@ Contributions are welcome! If you have any suggestions or improvements, please o
 4. **Push to the branch**: `git push origin feature/your-feature-name`.
 5. **Open a pull request**.
 
+## Disclaimer
+This project is for educational purposes only. It is not an official Microsoft website and is not affiliated with or endorsed by Microsoft Corporation. The project is a clone and does not contain any original content from the Microsoft website.
+
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](https://mit-license.org/) file for more details.
