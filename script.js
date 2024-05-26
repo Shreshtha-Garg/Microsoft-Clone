@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     let intervalId;
     let isPlaying = true;
+    const transitionDuration = 1000; // Transition duration in milliseconds
 
     // Function to remove border from all buttons inside .btns
     function removeBorder() {
@@ -42,29 +43,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function nextSlide() {
+    async function animateSlideOut(slide, direction) {
+        return new Promise(resolve => {
+            slide.classList.remove('enterClockwise', 'enterAntiClockwise');
+            slide.classList.add(direction === 'next' ? 'exitClockwise' : 'exitAntiClockwise');
+            setTimeout(() => {
+                slide.classList.remove('exitClockwise', 'exitAntiClockwise');
+                slide.style.display = 'none';
+                resolve();
+            }, transitionDuration);
+        });
+    }
+
+    async function animateSlideIn(slide, direction) {
+        return new Promise(resolve => {
+            slide.style.display = 'flex';
+            slide.classList.add(direction === 'next' ? 'enterClockwise' : 'enterAntiClockwise');
+            setTimeout(() => {
+                slide.classList.remove('enterClockwise', 'enterAntiClockwise');
+                resolve();
+            }, transitionDuration);
+        });
+    }
+
+    async function nextSlide() {
+        const currentSlide = slides[currentIndex];
         currentIndex = (currentIndex + 1) % slides.length;
+        const nextSlide = slides[currentIndex];
+
+        await Promise.all([animateSlideOut(currentSlide, 'next'), animateSlideIn(nextSlide, 'next')]);
+
         showSlide(currentIndex);
     }
 
-    function prevSlide() {
+    async function prevSlide() {
+        const currentSlide = slides[currentIndex];
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        const prevSlide = slides[currentIndex];
+
+        await Promise.all([animateSlideIn(prevSlide, 'prev'), animateSlideOut(currentSlide, 'prev')]);
+
         showSlide(currentIndex);
     }
 
     function startAutoSlide() {
         intervalId = setInterval(nextSlide, 5000);
-        // console.log("in start as");
     }
 
     function stopAutoSlide() {
         clearInterval(intervalId);
-        // console.log("in stop as");
     }
 
     prevButton.addEventListener('click', () => {
         stopAutoSlide();
-        if(isPlaying){
+        if (isPlaying) {
             startAutoSlide();
         }
         removeBorder();
@@ -74,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     nextButton.addEventListener('click', () => {
         stopAutoSlide();
-        if(isPlaying){
+        if (isPlaying) {
             startAutoSlide();
         }
         removeBorder();
@@ -88,14 +120,12 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplayButtonLabel.innerText = 'Play';
             iconPause.style.display = 'none';
             iconPlay.style.display = 'flex';
-            // console.log("stopped");
             stopAutoSlide();
         } else {
             autoplayButton.setAttribute('aria-pressed', 'false');
             autoplayButtonLabel.innerText = 'Pause';
             iconPause.style.display = 'flex';
             iconPlay.style.display = 'none';
-            // console.log("started");
             startAutoSlide();
         }
         isPlaying = !isPlaying; // Toggle the play state
@@ -111,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlide(currentIndex);
     startAutoSlide();
-});
-document.addEventListener('DOMContentLoaded', function () {
+
+    // Additional JavaScript for dropdown and hamburger menu
     const allMicrosoft = document.querySelector('.all-microsoft');
     const allMicrosoftDropdown = document.getElementById('allMicrosoftDropdown');
     const hamburgerContainer = document.querySelector('.hamburger-container');
