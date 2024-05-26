@@ -15,7 +15,7 @@ This project is a clone of the Microsoft website, designed to replicate the look
 
 ## Demo
 
-A live demo of the Microsoft clone website can be accessed [here](#).
+A live demo of the Microsoft clone website can be accessed [here](https://shreshtha-garg.github.io/Microsoft-Clone/).
 
 ## Features
 
