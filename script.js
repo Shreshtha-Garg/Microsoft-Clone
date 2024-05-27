@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.querySelector('.slides');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const firstDot = document.getElementById("first_dot");
@@ -12,6 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
     let intervalId;
     let isPlaying = true;
     const transitionDuration = 1000; // Transition duration in milliseconds
+    let maxHeight = 0;
+
+    // Calculate the maximum height among all slides
+    slides.forEach(slide => {
+        const slideHeight = slide.offsetHeight;
+        if (slideHeight > maxHeight) {
+            maxHeight = slideHeight;
+        }
+    });
+
+    // Set the height of the slides container to the maximum height
+    slidesContainer.style.height = `${maxHeight}px`;
 
     // Function to remove border from all buttons inside .btns
     function removeBorder() {
@@ -57,14 +70,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function animateSlideIn(slide, direction) {
         return new Promise(resolve => {
-            slide.style.display = 'flex';
+            const screenWidth = window.innerWidth;
+    
+            if (screenWidth < 1024) { // Below lg breakpoints
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'flex';
+            }
+    
             slide.classList.add(direction === 'next' ? 'enterClockwise' : 'enterAntiClockwise');
+    
             setTimeout(() => {
                 slide.classList.remove('enterClockwise', 'enterAntiClockwise');
                 resolve();
             }, transitionDuration);
         });
-    }
+    }    
 
     async function nextSlide() {
         const currentSlide = slides[currentIndex];
