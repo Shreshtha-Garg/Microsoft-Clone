@@ -49,15 +49,26 @@
 .slide {
     flex: 0 0 100%;
     display: none;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100%;
+    height: auto;
     transition: transform 1s ease-out;
 }
 
-.slide.active {
-    display: flex;
+@media (max-width: 1023px) {
+    .slide.active {
+        display: block;
+    }
 }
+@media (min-width: 1024px) {
+    .slide.active {
+        display: flex;
+    }
+}
+/* .slide.active { */
+    /* display: flex; */
+/* } */
+
 
 .slide.exitClockwise {
     animation: slideOutClockwise 1s forwards;
